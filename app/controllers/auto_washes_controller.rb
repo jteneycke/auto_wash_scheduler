@@ -28,6 +28,7 @@ class AutoWashesController < ApplicationController
   # POST /auto_washes
   # POST /auto_washes.json
   def create
+    binding.pry
     @auto_wash = AutoWash.new(auto_wash_params)
 
     respond_to do |format|

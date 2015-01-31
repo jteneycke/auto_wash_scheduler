@@ -1,4 +1,4 @@
-= form_for(@auto_wash) do |f|
+= simple_form_for(@auto_wash) do |f|
   - if @auto_wash.errors.any?
     #error_explanation
       %h2
@@ -8,16 +8,17 @@
         - @auto_wash.errors.full_messages.each do |message|
           %li= message
   .field
-    = f.label :location
-    %br/
-    = f.text_field :location
+    = f.input :location
   .field
-    = f.label :start
-    %br/
-    = f.datetime_select :start
+    = f.input :start, as: :string
   .field
-    = f.label :close
-    %br/
-    = f.datetime_select :close
+    = f.input :close, as: :string
   .actions
     = f.submit
+
+
+:javascript
+  $(function () {
+    $('#auto_wash_start').datetimepicker();
+    $('#auto_wash_close').datetimepicker();
+  });
