@@ -1,0 +1,48 @@
+%p#notice= notice
+%h1 Location:
+%p= @auto_wash.location
+%h1 Hours of Operation:
+%p
+  %strong Start:
+  = BusinessTime::Config.beginning_of_workday
+%p
+  %strong Close:
+  = BusinessTime::Config.end_of_workday
+  = 1.business_hour.from_now
+= link_to 'Edit', edit_auto_wash_path(@auto_wash)
+|
+\#{link_to 'Back', auto_washes_path}
+%h1 Create a shift
+= form_for([@auto_wash, @shift]) do |f|
+  .field
+    = f.label :shift_start
+    %br/
+    = f.datetime_select :shift_start
+  .field
+    = f.label :shift_end
+    %br/
+    = f.datetime_select :shift_end
+  .field
+    - if current_user
+      = f.hidden_field :user_id, :value => current_user.id
+  .actions
+    = f.submit
+- if @shift.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@reservation.errors.count, "error")
+      prohibited this product from being saved:
+    %ul
+      - @reservation.errors.full_messages.each do |msg|
+        %li= msg
+%br/
+#calendar
+%h1
+  %strong Shifts:
+- @employee_shifts.each do |shift|
+  %p
+    Start Time: #{shift.shift_start}
+  %p
+    End Time: #{shift.shift_end}
+  %p
+    ID: #{shift.id}

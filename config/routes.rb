@@ -17,4 +17,8 @@ Railsbricks7652::Application.routes.draw do
     resources :posts
   end
 
+  resources :auto_washes do
+    resources :shifts
+  end
+
 end

@@ -7,9 +7,11 @@ gem 'sass-rails', '5.0.1'
 gem 'uglifier', '2.6.0'
 gem 'coffee-rails', '4.1.0'
 gem 'jquery-rails', '4.0.3'
-gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '2.2.6'
 gem 'bcrypt', '3.1.9'
+
+gem 'haml-rails'
+gem 'simple_form'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
@@ -29,6 +31,8 @@ gem 'bootstrap-sass', '3.3.3'
 group :development, :test do
   gem 'byebug', '3.5.1'
   gem 'web-console', '2.0.0'
+  gem 'pry-rails'
+  gem 'quiet_assets'
 
   # Figaro: https://github.com/laserlemon/figaro
   gem 'figaro', '1.0.0'

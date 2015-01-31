@@ -1,0 +1,19 @@
+%h1 Listing all the washes, bitch
+%table
+  %thead
+    %tr
+      %th Location
+      %th Start
+      %th Close
+      %th{:colspan => "3"}
+  %tbody
+    - @auto_washes.each do |auto_wash|
+      %tr
+        %td= auto_wash.location
+        %td= auto_wash.start
+        %td= auto_wash.close
+        %td= link_to 'Show', auto_wash
+        %td= link_to 'Edit', edit_auto_wash_path(auto_wash)
+        %td= link_to 'Destroy', auto_wash, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Auto wash', new_auto_wash_path

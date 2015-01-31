@@ -1,0 +1,23 @@
+= form_for(@auto_wash) do |f|
+  - if @auto_wash.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@auto_wash.errors.count, "error")
+        prohibited this auto_wash from being saved:
+      %ul
+        - @auto_wash.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :location
+    %br/
+    = f.text_field :location
+  .field
+    = f.label :start
+    %br/
+    = f.datetime_select :start
+  .field
+    = f.label :close
+    %br/
+    = f.datetime_select :close
+  .actions
+    = f.submit

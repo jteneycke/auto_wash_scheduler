@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   
-# Relations
-has_many :posts
+  # Relations
+  has_many :posts
+  has_many :shifts
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
