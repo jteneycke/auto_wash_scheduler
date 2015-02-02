@@ -15,4 +15,5 @@
 //= require bootstrap 
 //= require moment
 //= require bootstrap-datetimepicker
+//= require jquery.timepicker.js
 //= require common

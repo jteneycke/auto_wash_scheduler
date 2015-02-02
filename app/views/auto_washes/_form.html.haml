@@ -10,15 +10,16 @@
   .field
     = f.input :location
   .field
-    = f.input :start, as: :time
+    = f.input :start, as: :string
   .field
-    = f.input :close, as: :time
+    = f.input :close, as: :string
   .actions
     = f.submit
 
 
 :javascript
   $(function () {
-    $('#auto_wash_start').datetimepicker();
-    $('#auto_wash_close').datetimepicker();
+    $('#auto_wash_start').timepicker();
+    $('#auto_wash_close').timepicker();
   });
+  
