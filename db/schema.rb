@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129010107) do
+ActiveRecord::Schema.define(version: 20150202190439) do
 
   create_table "auto_washes", force: :cascade do |t|
     t.string   "location"
-    t.datetime "start"
-    t.datetime "close"
+    t.time     "start"
+    t.time     "close"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

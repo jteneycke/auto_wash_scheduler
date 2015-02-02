@@ -4,11 +4,12 @@
 %h1 Hours of Operation:
 %p
   %strong Start:
-  = BusinessTime::Config.beginning_of_workday
+  -# = BusinessTime::Config.beginning_of_workday
+  %p= @auto_wash.start
 %p
   %strong Close:
-  = BusinessTime::Config.end_of_workday
-  = 1.business_hour.from_now
+  -# = BusinessTime::Config.end_of_workday
+  %p= @auto_wash.close
 = link_to 'Edit', edit_auto_wash_path(@auto_wash)
 |
 \#{link_to 'Back', auto_washes_path}
