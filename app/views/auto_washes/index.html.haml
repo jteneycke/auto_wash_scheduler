@@ -1,4 +1,7 @@
 %h1 Listing all the washes, dawg
+= link_to 'New Auto wash', new_auto_wash_path
+%br
+%br/
 %table.table.table-striped
   %tr
     %th Location
@@ -13,5 +16,3 @@
       %td= link_to 'Show', auto_wash
       %td= link_to 'Edit', edit_auto_wash_path(auto_wash)
       %td= link_to 'Destroy', auto_wash, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Auto wash', new_auto_wash_path

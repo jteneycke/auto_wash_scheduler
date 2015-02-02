@@ -7,12 +7,21 @@
       %ul
         - @auto_wash.errors.full_messages.each do |message|
           %li= message
-  .field
-    = f.input :location
-  .field
-    = f.input :start, as: :string
-  .field
-    = f.input :close, as: :string
+  .form-group
+    = f.label :location
+    .row
+      .col-sm-6
+        = f.text_field :location, class: "form-control"
+  .form-group
+    = f.label :start
+    .row
+      .col-sm-6
+        = f.text_field :start, class: "form-control"
+  .form-group
+    = f.label :start
+    .row
+      .col-sm-6
+        = f.text_field :close, class: "form-control"
   .actions
     = f.submit
 
