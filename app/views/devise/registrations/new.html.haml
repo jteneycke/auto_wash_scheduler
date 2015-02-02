@@ -11,6 +11,26 @@
           .col-sm-6
             = f.email_field :email, class: "form-control"
       .form-group
+        = f.label :name
+        .row
+          .col-sm-6
+            = f.text_field :name, class: "form-control"
+      .form-group
+        = f.label :phone
+        .row
+          .col-sm-6
+            = f.text_field :phone, class: "form-control"
+      .form-group
+        = f.label :address
+        .row
+          .col-sm-6
+            = f.text_field :address, class: "form-control"
+      .form-group
+        = f.label :postal_code
+        .row
+          .col-sm-6
+            = f.text_field :postal_code, class: "form-control"
+      .form-group
         .row
           .col-sm-6
             = f.label :password

@@ -10,6 +10,21 @@
         .row
           .col-sm-6
             = f.email_field :email, :autofocus => true, class: "form-control"
+      .form-group
+        = f.label :name
+        .row
+          .col-sm-6
+            = f.text_field :name, class: "form-control"
+      .form-group
+        = f.label :phone
+        .row
+          .col-sm-6
+            = f.text_field :phone, class: "form-control"
+      .form-group
+        = f.label :address
+        .row
+          .col-sm-6
+            = f.text_field :address, class: "form-control"
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         .row
           .col-sm-6
