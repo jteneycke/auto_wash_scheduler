@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202203552) do
+ActiveRecord::Schema.define(version: 20150203014356) do
 
   create_table "auto_washes", force: :cascade do |t|
     t.string   "location"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150202203552) do
     t.time     "close"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "postal_code"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

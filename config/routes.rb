@@ -20,5 +20,8 @@ Railsbricks7652::Application.routes.draw do
   resources :auto_washes do
     resources :shifts
   end
-
+  get "search_page", to: "auto_washes#search_page", as: "search_page"
+  get "find_nearby/:postal_code", to: "auto_washes#find_nearby", as: "find_nearby"
 end
+
+

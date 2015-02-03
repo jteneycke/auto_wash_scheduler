@@ -1,0 +1,14 @@
+- title("Find Nearby")
+%h1 Find an Auto Wash Near You!
+%br
+.row
+  .col-sm-6
+    = form_tag search_page_path, method: 'get', html: {role: "form"} do
+      .form-group
+        = label_tag :name, "Your Postal Code"
+        .row
+          .col-xs-12
+            = text_field_tag :postal_code, @postal_code, placeholder: "Enter your postal code...", :autofocus => true, class: "form-control"
+            %br
+            = submit_tag "Search", :postal_code => nil, class: "btn btn-sm btn-primary"
+            = link_to "All", search_page_path, {class: "btn btn-sm btn-link"}

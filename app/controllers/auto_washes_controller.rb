@@ -16,6 +16,14 @@ class AutoWashesController < ApplicationController
     @employee_shifts = @auto_wash.shifts.all
   end
 
+  def find_nearby
+    @auto_wash = AutoWash.find(params[:postal_code])
+  end
+
+  def search_page
+    @auto_washes = AutoWash.all
+  end
+
   # GET /auto_washes/new
   def new
     @auto_wash = AutoWash.new
@@ -73,6 +81,6 @@ class AutoWashesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def auto_wash_params
-      params.require(:auto_wash).permit(:location, :start, :close)
+      params.require(:auto_wash).permit(:location,:postal_code, :start, :close)
     end
 end

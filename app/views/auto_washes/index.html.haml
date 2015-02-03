@@ -5,12 +5,14 @@
 %table.table.table-striped
   %tr
     %th Location
+    %th Postal Code
     %th Start
     %th Close
     %th{:colspan => "3"}
   - @auto_washes.each do |auto_wash|
     %tr
       %td= auto_wash.location
+      %td= auto_wash.postal_code
       %td= auto_wash.start.strftime("%I:%M %p")
       %td= auto_wash.close.strftime("%I:%M %p")
       %td= link_to 'Show', auto_wash
