@@ -1,11 +1,11 @@
-%li= link_to "Posts", posts_path
-%li= link_to "Auto Wash", auto_washes_path
+%li= link_to "Find a Location Near You", posts_path
+%li= link_to "Auto Washes", auto_washes_path
 %li= link_to "Contact", contact_path
 - if !user_signed_in?
   %li= link_to "Sign in", new_user_session_path
   %li= link_to "Sign up", new_user_registration_path
 - else
-  %li= link_to "Protected Page", inside_path
+  -# %li= link_to "Protected Page", inside_path
   %li= link_to "Edit your account", edit_user_registration_path
   - if current_user.admin?
     %li= link_to "Admin", admin_root_path

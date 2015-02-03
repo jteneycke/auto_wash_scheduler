@@ -9,10 +9,21 @@
           .col-xs-12
             = text_field_tag :name, @name, placeholder: "Enter your name...", :autofocus => true, class: "form-control"
       .form-group
+        = label_tag :phone
+        .row
+          .col-xs-12
+            = text_field_tag :phone, @phone, placeholder: "Enter your phone number...", :autofocus => true, class: "form-control"
+      .form-group
+        = label_tag :postal_code
+        .row
+          .col-xs-12
+            = text_field_tag :postal_code, @postal_code, placeholder: "Enter your postal code...", :autofocus => true,class: "form-control"
+      .form-group
         = label_tag :email, "Your email"
         .row
           .col-xs-12
             = text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control"
+
       .form-group
         = label_tag :message, "Your message"
         .row
