@@ -16,7 +16,7 @@ Railsbricks7652::Application.routes.draw do
     get "posts/dashboard", to: "posts#dashboard", as: "posts_dashboard"
     resources :posts
   end
-
+  
   resources :auto_washes do
     resources :shifts
   end
