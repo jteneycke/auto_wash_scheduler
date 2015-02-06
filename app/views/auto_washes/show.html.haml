@@ -38,7 +38,9 @@
       - @reservation.errors.full_messages.each do |msg|
         %li= msg
 %br/
-#calendar
+
+%div#calendar
+
 %h1
   %strong Shifts:
 - @employee_shifts.each do |shift|
@@ -48,3 +50,18 @@
     End Time: #{shift.shift_end}
   %p
     ID: #{shift.id}
+
+:javascript
+  $(function () {
+    $('#calendar').removeAttr('style');
+    $('#calendar').fullCalendar({
+      
+        header : {
+        left : 'prev,next today',
+        center : 'title',
+        right : 'month,basicWeek,basicDay'
+      }   
+
+    })  
+  });
+  

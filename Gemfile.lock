@@ -79,6 +79,9 @@ GEM
       sass (~> 3.2)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
+    fullcalendar-rails (2.2.5.1)
+      jquery-rails (>= 3.1.1, < 5.0.0)
+      momentjs-rails (~> 2.8, >= 2.8.4)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     haml (4.0.6)
@@ -228,12 +231,13 @@ DEPENDENCIES
   figaro (= 1.0.0)
   font-awesome-sass (= 4.2.2)
   friendly_id (= 5.1.0)
+  fullcalendar-rails
   haml-rails
   jbuilder (= 2.2.6)
   jquery-rails (= 4.0.3)
   jquery-timepicker-rails
   kaminari (= 0.16.2)
-  momentjs-rails (>= 2.8.1)
+  momentjs-rails
   pg
   pry-rails
   quiet_assets

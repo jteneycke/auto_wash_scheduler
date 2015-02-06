@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap 
 //= require moment
+//= require fullcalendar
 //= require bootstrap-datetimepicker
 //= require jquery.timepicker.js
 //= require common

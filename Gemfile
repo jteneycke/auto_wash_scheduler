@@ -12,9 +12,10 @@ gem 'bcrypt', '3.1.9'
 
 gem 'haml-rails'
 gem 'simple_form'
-gem 'momentjs-rails', '>= 2.8.1'
+gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
 gem 'jquery-timepicker-rails'
+gem 'fullcalendar-rails'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
