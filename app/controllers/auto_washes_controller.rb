@@ -1,11 +1,15 @@
 class AutoWashesController < ApplicationController
   before_action :set_auto_wash, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :json
+
 
   # GET /auto_washes
   # GET /auto_washes.json
   def index
     @auto_washes = AutoWash.all
+    respond_with @auto_washes
   end
+
 
   # GET /auto_washes/1
   # GET /auto_washes/1.json

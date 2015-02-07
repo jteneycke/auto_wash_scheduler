@@ -1,5 +1,6 @@
 Railsbricks7652::Application.routes.draw do
   root "pages#home"
+
   get "home", to: "pages#home", as: "home"
   get "inside", to: "pages#inside", as: "inside"
   get "/contact", to: "pages#contact", as: "contact"
@@ -17,9 +18,11 @@ Railsbricks7652::Application.routes.draw do
     resources :posts
   end
 
-  resources :auto_washes do
-    resources :shifts
-  end
+  resources :auto_washes
+#  resources :auto_washes do
+#    resources :shifts
+#  end
+#
   get "services", to: "auto_washes#services", as: "services"
   get "search_page", to: "auto_washes#search_page", as: "search_page"
   get "find_nearby/:postal_code", to: "auto_washes#find_nearby", as: "find_nearby"

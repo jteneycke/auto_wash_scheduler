@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   def inside
   end
   
-def posts
+  def posts
     @posts = Post.published.page(params[:page]).per(10)
   end
   
@@ -18,7 +18,6 @@ def posts
   rescue
     redirect_to root_path
   end
-
   
   def email
     @name = params[:name]
