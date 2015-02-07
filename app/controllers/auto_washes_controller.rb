@@ -24,6 +24,9 @@ class AutoWashesController < ApplicationController
     @auto_washes = AutoWash.all
   end
 
+  def services
+  end
+
   # GET /auto_washes/new
   def new
     @auto_wash = AutoWash.new
