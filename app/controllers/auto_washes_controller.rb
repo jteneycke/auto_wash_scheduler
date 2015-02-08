@@ -18,6 +18,7 @@ class AutoWashesController < ApplicationController
     @shift = @auto_wash.shifts.build
     # @shift.user = current_user
     @employee_shifts = @auto_wash.shifts.all
+    respond_with @auto_wash.shifts.all
   end
 
   def find_nearby

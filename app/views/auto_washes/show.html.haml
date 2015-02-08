@@ -51,7 +51,9 @@
   %p
     ID: #{shift.id}
 
-:javascript
+
+
+  :javascript
   $(function () {
     $('#calendar').removeAttr('style');
     $('#calendar').fullCalendar({
@@ -61,10 +63,11 @@
         center : 'title',
         right : 'month,basicWeek,basicDay'
       },
-        events: {
-          url: '/show.json',
+        eventSources: [
+        {
+          url: '/auto_washes/17.json',
       }
+      ],
 
     })  
   });
-  

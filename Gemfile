@@ -7,7 +7,7 @@ gem 'sass-rails', '5.0.1'
 gem 'uglifier', '2.6.0'
 gem 'coffee-rails', '4.1.0'
 gem 'jquery-rails', '4.0.3'
-gem 'active_model_serializers'
+gem 'active_model_serializers', '0.9.0'
 gem 'bcrypt', '3.1.9'
 
 gem 'haml-rails'
